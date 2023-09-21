@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap");
-@import './Reset.css';
 .padding_2 {
   padding-inline: 2rem;
 }
@@ -113,51 +112,60 @@
   color: #fff;
 }
 
-::-moz-selection {
-  background: #5fb4a2;
-  color: #fff;
-}
-
-::selection {
-  background: #5fb4a2;
-  color: #fff;
-}
-
-/* main styles */
-.body__wrapper {
-  max-width: 1111px;
-  margin: auto;
-}
-
-.portfolio__project {
-  display: flex;
-  flex-direction: column;
+.navbar {
+  padding-block: 32px;
 }
 @media (min-width: 768px) {
-  .portfolio__project {
-    flex-direction: row;
-    gap: 69px;
+  .navbar {
+    padding-top: 64px;
+    padding-bottom: 40px;
   }
 }
 
-@media (min-width: 768px) {
-  .portfolio__project:nth-of-type(2n) {
-    flex-direction: row-reverse;
-  }
-}
-.portfolio__project:not(:nth-of-type(1)) {
-  margin-top: 72px;
+.container-fluid {
+  --bs-gutter-x: 0rem;
 }
 
-.project__card {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  gap: 24px;
-  padding-block: 24px;
-  border-block: 1px solid rgba(51, 50, 61, 0.0823529412);
-  margin-top: 2rem;
+.navbar_toggler {
+  border: none;
+  width: 24px;
+  height: 24px;
+  --bs-navbar-toggler-padding-y: 0;
+  --bs-navbar-toggler-padding-x: 0;
 }
-.project__card .button {
-  width: 175px;
-}/*# sourceMappingURL=App.css.map */
+
+.nav_item {
+  color: hsl(245, 10%, 22%);
+  font-family: "Public Sans", Helvetica;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 200ms ease-in;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .nav_item {
+    position: relative;
+  }
+  .nav_item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #5fb4a2;
+    transform-origin: bottom center;
+    transition: transform 0.2s ease-out;
+    font-weight: bold;
+  }
+  .nav_item:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+}/*# sourceMappingURL=Navbar.module.css.map */
