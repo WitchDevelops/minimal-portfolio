@@ -1,28 +1,86 @@
 @import './variables';
 
-.home__contact {
-    margin-top: 115px;
-    & > .section__header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      @media (min-width: 768px) {
-        text-align: left;
-      }
-    }
-    @media (min-width: 768px) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      margin-block: 6rem;
-    }
-  }
+.footer {
+    background-color: $color--dark;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-block: 3.5rem;
 
-  .CTA {
-    margin: auto;
-    margin-top: 2.5;
-    margin-bottom: 5rem;
-    @media (min-width: 768px) {
-      margin: unset;
+    &__wrapper {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+        }
     }
-  }
+
+    &__Ctn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            gap: 3rem;
+            width: 100%;
+            justify-content: space-between;
+            max-width: 1200px;
+            padding-inline: 2.5rem;
+        }
+    }
+
+
+    &__text {
+        text-align: center;
+        font-family: Public Sans;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    &__icon {
+        fill: white;
+    }
+}
+
+.nav_link {
+    color: $color--white;
+    padding: 1rem;
+
+    &:hover {
+        color: $color--white;
+        background-color: $color--accent;
+    }
+
+    &:active {
+        background-color: $color--white;
+        color: $color--accent;
+    }
+
+    &:visited {
+        color: $color--white;
+    }
+}
