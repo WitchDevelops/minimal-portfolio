@@ -3,7 +3,7 @@ import styles from "./CTA.module.css";
 
 function CTA() {
   return (
-    <section className={styles.home__contact}>
+    <section className={styles.contact}>
       <h2 className={`${styles.section__header} ${styles.col_md_6}`}>
         Interested in doing a&nbsp;project together?
       </h2>

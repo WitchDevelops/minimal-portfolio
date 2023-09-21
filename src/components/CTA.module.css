@@ -112,25 +112,28 @@
   color: #fff;
 }
 
-.home__contact {
+.contact {
   margin-top: 115px;
-}
-.home__contact > .section__header {
-  text-align: center;
-  margin-bottom: 2.5rem;
+  padding-inline: 2rem;
 }
 @media (min-width: 768px) {
-  .home__contact > .section__header {
-    text-align: left;
-  }
-}
-@media (min-width: 768px) {
-  .home__contact {
+  .contact {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
     margin-block: 6rem;
+  }
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  text-wrap: balance;
+}
+@media (min-width: 768px) {
+  .section__header {
+    text-align: left;
   }
 }
 
