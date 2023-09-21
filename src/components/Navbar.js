@@ -1,10 +1,11 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import styles from "./Navbar.module.css";
 
 function CustomNavbar() {
   return (
-    <Navbar expand="md" bg="light" variant="light" className="padding-2">
+    <Navbar expand="md" variant="light" className={`${styles.padding_2} ${styles.navbar}`}>
       <Container fluid>
         <Navbar.Brand as={Link} to="/">
           <svg xmlns="http://www.w3.org/2000/svg" width="61" height="32" viewBox="0 0 61 32" fill="none">
@@ -13,16 +14,16 @@ function CustomNavbar() {
               fill="#33323D" />
           </svg>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarSupportedContent" />
+        <Navbar.Toggle aria-controls="navbarSupportedContent" className={styles.navbar_toggler}/>
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="w-100 align-items-end justify-content-end">
-            <Nav.Item>
+            <Nav.Item className={styles.nav_item}>
               <Nav.Link as={Link} to="/" className="nav-link active">Home</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            <Nav.Item className={styles.nav_item}>
               <Nav.Link as={Link} to="/portfolio" className="nav-link">Portfolio</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            <Nav.Item className={styles.nav_item}>
               <Nav.Link as={Link} to="/contact" className="nav-link">Contact Me</Nav.Link>
             </Nav.Item>
           </Nav>
