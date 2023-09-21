@@ -6,7 +6,8 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import CTA from "./components/CTA";
+import  Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
+        <CTA />
+       <Footer />
     </Router>
     </div>
   );
