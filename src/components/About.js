@@ -1,5 +1,7 @@
 import React from "react";
-import styles from './About.module.css';
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import styles from "./About.module.css";
 
 import desktopImage1x from "../assets/images/homepage/desktop/image-homepage-hero.jpg";
 import desktopImage2x from "../assets/images/homepage/desktop/image-homepage-hero@2x.jpg";
@@ -35,7 +37,10 @@ function About() {
           <h1 className={styles.home__header}>
             Hey, I’m Alex Spencer and I love building beautiful websites
           </h1>
-          <a href="#about-me" className={`${styles.button} ${styles.button_primary}`}>
+          <a
+            href="#about-me"
+            className={`${styles.button} ${styles.button_primary}`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"
@@ -113,9 +118,17 @@ function About() {
               going for a walk, run or cycling. I’d love you to check out my
               work.
             </p>
-            <a href="portfolio.html" className={`${styles.button} ${styles.button_secondary}`}>
-              Go to Portfolio
-            </a>
+            <Nav>
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  to="/portfolio"
+                  className={`${styles.button} ${styles.button_secondary}`}
+                >
+                  Go to Portfolio
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
           </div>
         </section>
       </main>
