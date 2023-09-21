@@ -9,65 +9,78 @@
     align-items: center;
     justify-content: center;
     padding-block: 3.5rem;
+
     &__wrapper {
-      @media (min-width: 768px) {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__Ctn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            gap: 3rem;
+            width: 100%;
+            justify-content: space-between;
+            max-width: 1200px;
+            padding-inline: 2.5rem;
+        }
+    }
+
+
+    &__text {
+        text-align: center;
+        font-family: Public Sans;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    &__icons {
         display: flex;
         flex-direction: row;
-        width: 100%;
-        justify-content: center;
-      }
-    }
-    &__Ctn {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2.5rem;
-      @media (min-width: 768px) {
-        flex-direction: row;
         align-items: center;
-        gap: 3rem;
-        width: 100%;
-        justify-content: space-between;
-        max-width: 1200px;
-        padding-inline: 2.5rem;
-      }
+        justify-content: center;
+        gap: 1rem;
     }
-  
-    & > .section__header {
-      text-wrap: balance;
+    &__icon {
+        fill: white;
     }
-    &__text {
-      text-align: center;
-      font-family: Public Sans;
-      font-size: 0.75rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      display: flex;
-      flex-direction: column;
-      @media (min-width: 768px) {
-        flex-direction: row;
-      }
-      & > a {
+}
+
+.nav_link {
+    color: $color--white;
+    padding: 1rem;
+
+    &:hover {
         color: $color--white;
-        padding: 1rem;
-        &:hover {
-          background-color: $color--accent;
-        }
-        &:active {
-          background-color: $color--white;
-          color: $color--accent;
-        }
-      }
+        background-color: $color--accent;
     }
-    &__icons {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      fill: white;
+
+    &:active {
+        background-color: $color--white;
+        color: $color--accent;
     }
-  }
+
+    &:visited {
+        color: $color--white;
+    }
+}

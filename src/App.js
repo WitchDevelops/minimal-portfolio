@@ -21,6 +21,7 @@ function App() {
         </Routes>
         <CTA />
        <Footer />
+       
     </Router>
     </div>
   );
