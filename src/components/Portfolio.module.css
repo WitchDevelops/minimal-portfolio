@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap");
-@import './Reset.css';
 .padding_2 {
   padding-inline: 2rem;
 }
@@ -113,18 +112,49 @@
   color: #fff;
 }
 
-::-moz-selection {
-  background: #5fb4a2;
-  color: #fff;
+.project {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .project {
+    flex-direction: row;
+    gap: 69px;
+  }
 }
 
-::selection {
-  background: #5fb4a2;
-  color: #fff;
+@media (min-width: 768px) {
+  .project:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+}
+.project:not(:nth-of-type(1)) {
+  margin-top: 72px;
 }
 
-/* main styles */
-.body__wrapper {
-  max-width: 1111px;
-  margin: auto;
-}/*# sourceMappingURL=App.css.map */
+.project_card {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 24px;
+  padding-block: 24px;
+  border-block: 1px solid rgba(51, 50, 61, 0.0823529412);
+  margin-top: 2rem;
+}
+
+.project_img img {
+  width: 100%;
+  max-width: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .project_img img {
+    max-width: unset;
+    height: 100%;
+  }
+}
+
+.button {
+  width: 175px;
+}/*# sourceMappingURL=Portfolio.module.css.map */

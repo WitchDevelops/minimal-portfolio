@@ -1,0 +1,41 @@
+@import './variables';
+
+.project {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 69px;
+    }
+  }
+  @media (min-width: 768px) {
+    .project:nth-of-type(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+  .project:not(:nth-of-type(1)) {
+    margin-top: 72px;
+  }
+
+
+  .project_card {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 24px;
+    padding-block: 24px;
+    border-block: 1px solid #33323D15;
+    margin-top: 2rem;
+  }
+  .project_img img {
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+    @media (min-width: 768px) {
+      max-width: unset;
+      height: 100%;
+    }
+  }
+  .button {
+      width: 175px;
+    }
