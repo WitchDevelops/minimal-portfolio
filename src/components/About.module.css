@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap");
+.padding_2 {
+  padding-inline: 2rem;
+}
+@media (min-width: 768px) {
+  .padding_2 {
+    padding-inline: 2.5rem;
+  }
+}
+
+.section__break {
+  color: hsl(245, 10%, 22%);
+  height: 1px;
+  opacity: 0.15;
+}
+.section__break_3 {
+  min-width: 113px;
+  max-width: 530px;
+}
+
+.section__header {
+  color: hsl(245, 10%, 22%);
+  font-family: "Ibarra Real Nova", Helvetica;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.625rem; /* 105% */
+  letter-spacing: -0.357px;
+}
+
+/* some bootstrap classes; I don't know hot to use Bootstrap with it so I'll just declare them here */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .col_md_5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .col_md_6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .mt_md_0 {
+    margin-top: 0;
+  }
+  .d_md_block {
+    display: block !important;
+  }
+}
+.w_100 {
+  width: 100% !important;
+}
+
+.d_none {
+  display: none;
+}
+
+.img_fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  display: block;
+  width: 200px;
+  height: 48px;
+  text-align: center;
+}
+.button__text {
+  font-family: "Public Sans";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: auto;
+}
+.button_primary {
+  background-color: hsl(205, 41%, 21%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+.button_primary:hover {
+  background-color: hsl(205, 41%, 25%);
+}
+.button_secondary {
+  outline: 1px solid hsl(245, 10%, 22%);
+  padding: 1rem;
+  color: hsl(245, 10%, 22%);
+  font-family: "Public Sans";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+}
+.button_secondary:hover {
+  background-color: #5fb4a2;
+  outline: 1px solid #fff;
+  color: #fff;
+}
+.button_secondary:active {
+  background-color: hsl(245, 10%, 22%);
+  outline: 1px solid #fff;
+  color: #fff;
+}
+
+.home__about {
+  padding-block: 2rem;
+  margin-top: 2.77rem;
+}
+@media (min-width: 768px) {
+  .home__about {
+    padding-top: 0;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.home__about__rightCtn {
+  padding-block: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  border-block: 1px solid hsla(205, 41%, 21%, 0.15);
+}
+@media (min-width: 768px) {
+  .home__about__rightCtn {
+    margin-left: 8.2%;
+    margin-top: 0;
+  }
+}
+
+.home__intro {
+  margin-top: 0.5rem;
+  margin-bottom: 2.75rem;
+}
+.home__intro .section__header {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .home__intro {
+    position: relative;
+  }
+  .home__inset {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    padding-left: 2.5rem;
+    max-width: 514px;
+  }
+  .home__inset .section__header {
+    margin-block: 3.5rem;
+    margin-bottom: 3rem;
+    max-width: 458px;
+    text-wrap: balance;
+  }
+}
+.home__header {
+  color: hsl(245, 10%, 22%);
+  font-family: "Ibarra Real Nova", Helvetica;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.625rem; /* 105% */
+  letter-spacing: -0.357px;
+  margin-top: 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.about__text {
+  color: hsl(245, 10%, 22%);
+  font-family: "Public Sans", Helvetica;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.87rem; /* 187.5% */
+  opacity: 0.8;
+  margin-top: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 992px) {
+  .about__text {
+    max-width: 350px;
+  }
+}
+
+.about__picture > img {
+  width: 100%;
+  max-width: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .about__picture > img {
+    max-width: unset;
+    height: 100%;
+  }
+}/*# sourceMappingURL=About.module.css.map */

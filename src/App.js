@@ -6,21 +6,21 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
+    <div className="body__wrapper">
     <Router>
-      <div>
         <Navbar />
         <Routes>
-        <Route path="/" exact element={<About />} />
+          <Route path="/" exact element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
-      
-      
+        <Footer />
     </Router>
+    </div>
   );
 }
 

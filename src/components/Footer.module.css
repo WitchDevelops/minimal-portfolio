@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap");
+.padding_2 {
+  padding-inline: 2rem;
+}
+@media (min-width: 768px) {
+  .padding_2 {
+    padding-inline: 2.5rem;
+  }
+}
+
+.section__break {
+  color: hsl(245, 10%, 22%);
+  height: 1px;
+  opacity: 0.15;
+}
+.section__break_3 {
+  min-width: 113px;
+  max-width: 530px;
+}
+
+.section__header {
+  color: hsl(245, 10%, 22%);
+  font-family: "Ibarra Real Nova", Helvetica;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.625rem; /* 105% */
+  letter-spacing: -0.357px;
+}
+
+/* some bootstrap classes; I don't know hot to use Bootstrap with it so I'll just declare them here */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .col_md_5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .col_md_6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .mt_md_0 {
+    margin-top: 0;
+  }
+  .d_md_block {
+    display: block !important;
+  }
+}
+.w_100 {
+  width: 100% !important;
+}
+
+.d_none {
+  display: none;
+}
+
+.img_fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  display: block;
+  width: 200px;
+  height: 48px;
+  text-align: center;
+}
+.button__text {
+  font-family: "Public Sans";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: auto;
+}
+.button_primary {
+  background-color: hsl(205, 41%, 21%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+.button_primary:hover {
+  background-color: hsl(205, 41%, 25%);
+}
+.button_secondary {
+  outline: 1px solid hsl(245, 10%, 22%);
+  padding: 1rem;
+  color: hsl(245, 10%, 22%);
+  font-family: "Public Sans";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+}
+.button_secondary:hover {
+  background-color: #5fb4a2;
+  outline: 1px solid #fff;
+  color: #fff;
+}
+.button_secondary:active {
+  background-color: hsl(245, 10%, 22%);
+  outline: 1px solid #fff;
+  color: #fff;
+}
+
+.home__contact {
+  margin-top: 115px;
+}
+.home__contact > .section__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .home__contact > .section__header {
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  .home__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-block: 6rem;
+  }
+}
+
+.CTA {
+  margin: auto;
+  margin-top: 2.5;
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .CTA {
+    margin: unset;
+  }
+}/*# sourceMappingURL=Footer.module.css.map */
