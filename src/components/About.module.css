@@ -28,7 +28,9 @@
   letter-spacing: -0.357px;
 }
 
-/* some bootstrap classes; I don't know hot to use Bootstrap with it so I'll just declare them here */
+/* some bootstrap classes
+/* I don't know hot to use Bootstrap with custom css for isolated components (classname syntax)
+/* so I'll just declare them here for now */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .col_md_5 {
     flex: 0 0 41.666667%;

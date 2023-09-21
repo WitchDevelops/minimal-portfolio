@@ -29,7 +29,27 @@ Despite I could easily build it in vanilla JS, I decided to push myself to pract
 # Useful resources
 
 ## CSS modules
+
 I've been reading about frontend architecture called atomic design and the principle really stick to me, because when left unchecked CSS styles can quickly get very messy. I wanted to put this principle into practice, starting with isolated components.
 * [Introduction to what CSS modules are](https://dev.to/eransakal/how-to-isolate-component-styles-in-react-using-css-modules-mkm)
 * [How to deal with multiple classes using CSS modules](https://www.codeconcisely.com/posts/react-css-modules-multiple-classes/)
 * [GH repo with the library](https://github.com/css-modules/css-modules)
+
+What I quickly learned:
+* BEM naming practices don't really work here, either using "--" for variantions or kebab-case caused errors, so I had to rename all the classes to use underscores instead.
+
+```
+.box--red {
+    BAD (compilation errors)
+}
+.box-red {
+    still BAD (doesn't compile)
+}
+.box__red {
+    GOOD (compiles)
+}
+```
+* when using multiple classes in JSX one has to precede the className declaration with the dolalr sign and basically template literals syntax. Like this:
+```
+<header className={`${styles.home__intro} ${styles.padding_2}`}>
+```
