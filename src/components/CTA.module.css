@@ -133,6 +133,7 @@
 @media (min-width: 768px) {
   .section__header {
     text-align: left;
+    margin-bottom: unset;
   }
 }
 

@@ -1,4 +1,6 @@
 import React from "react";
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styles from "./CTA.module.css";
 
 function CTA() {
@@ -10,12 +12,13 @@ function CTA() {
       <hr
         className={`${styles.section__break} ${styles.section__break_3} ${styles.d_none} ${styles.d_md_block}`}
       />
-      <a
-        href="portfolio.html"
-        className={`${styles.button} ${styles.button_secondary} ${styles.CTA}`}
-      >
-        Contact me
-      </a>
+      <Nav>
+        <Nav.Item>
+        <Nav.Link as={Link} to="/contact" className={`${styles.button} ${styles.button_secondary} ${styles.CTA}`}>
+                Contact Me
+              </Nav.Link>
+        </Nav.Item>
+      </Nav>
     </section>
   );
 }
