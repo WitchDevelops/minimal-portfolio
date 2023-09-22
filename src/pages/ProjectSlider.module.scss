@@ -1,0 +1,46 @@
+@import '../components/variables';
+
+.nav_btns_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content: space-between;
+    
+}
+.nav_btn {
+    border: 0px transparent;
+    outline: 1px solid $color--dark-15;
+    width: 50vw;
+    background-color: unset;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.nav_btn:nth-of-type(1) {
+    align-items: flex-start;
+}
+
+.nav_btn:nth-of-type(2) {
+    align-items: flex-end;
+}
+.nav_arrow {
+    margin-bottom: 1rem;
+}
+.btn_title {
+    color: $color--dark;
+    font-family: $txt--serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem; /* 112.5% */
+    letter-spacing: -0.01788rem;
+}
+.btn_nav_text {
+    color: $color--dark;
+    opacity: 0.5;
+    font-family: $txt--sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem; /* 187.5% */
+}
