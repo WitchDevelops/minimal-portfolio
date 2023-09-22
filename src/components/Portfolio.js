@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./About.module.css";
+import styles from "./Portfolio.module.css";
 
 import desktopManage2x from "../assets/images/portfolio/desktop/image-portfolio-manage@2x.jpg";
 import tabletManage from "../assets/images/portfolio/tablet/image-portfolio-manage.jpg";
@@ -26,15 +26,16 @@ function Project({
   alt,
 }) {
   return (
-    <div className={styles.project}>
+    <div className={`${styles.project}`}>
       <picture className={`${styles.col_md_5} ${styles.project_img}`}>
-        <source srcset={desktop} media="(min-width: 1440px)" />
-        <source srcset={tablet} media="(min-width: 768px)" />
-        <source srcset={mobile} media="(max-width: 767px)" />
+        <source srcset={desktop} media="(min-width: 768px)" />
+        <source srcset={tablet} media="(min-width: 576px)" />
+        <source srcset={mobile} media="(max-width: 575px)" />
         <img src={imageUrl} alt={alt} />
       </picture>
-      <article className={styles.project_card}>
-        <h2 className={styles.section__header}>{title}</h2>
+      <div className={styles.project_card_wrapper}>
+        <article className={styles.project_card}>
+          <h2 className={styles.section__header}>{title}</h2>
         <p className={styles.section__text}>{description}</p>
         <Link
           to={path}
@@ -43,6 +44,7 @@ function Project({
           view project
         </Link>
       </article>
+      </div>
     </div>
   );
 }
