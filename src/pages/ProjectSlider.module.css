@@ -24,13 +24,26 @@
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 2.625rem; /* 105% */
+  line-height: 2.625rem;
+  /* 105% */
   letter-spacing: -0.357px;
 }
 
+.section__subheader {
+  color: hsl(245, 10%, 22%);
+  font-family: "Ibarra Real Nova", Helvetica;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.625rem;
+  /* 131.25% */
+  letter-spacing: -0.01788rem;
+  margin-bottom: 1.75rem;
+}
+
 /* some bootstrap classes
-/* I don't know hot to use Bootstrap with custom css for isolated components (classname syntax)
-/* so I'll just declare them here for now */
+  /* I don't know hot to use Bootstrap with custom css for isolated components (classname syntax)
+  /* so I'll just declare them here for now */
 @media (min-width: 768px) {
   .col_md_5 {
     flex: 0 0 41.666667%;
@@ -112,6 +125,44 @@
   color: #fff;
 }
 
+.header_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.description_txt {
+  color: hsl(245, 10%, 22%);
+  font-family: "Public Sans", Helvetica;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  /* 200% */
+  opacity: 0.8;
+}
+
+.accent {
+  color: #5fb4a2;
+  font-family: "Public Sans", Helvetica;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem;
+  /* 230.769% */
+}
+
+.detail_wrapper {
+  margin-bottom: 2.5rem;
+}
+
+.preview_wrapper .section__subheader {
+  margin-bottom: 2.5rem;
+}
+
 .nav_btns_wrapper {
   display: flex;
   flex-direction: row;
@@ -147,7 +198,8 @@
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 2.25rem; /* 112.5% */
+  line-height: 2.25rem;
+  /* 112.5% */
   letter-spacing: -0.01788rem;
 }
 
@@ -158,5 +210,6 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.875rem; /* 187.5% */
+  line-height: 1.875rem;
+  /* 187.5% */
 }/*# sourceMappingURL=ProjectSlider.module.css.map */

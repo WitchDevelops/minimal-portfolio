@@ -27,6 +27,10 @@ const projects = [
       mobile: `${mobileManage}`,
       imageUrl: `${mobileManage}`,
       alt: "dashboard project preview",
+      tag: "Interaction Design / Front End Development",
+      tech: "HTML / CSS / JS",
+      background: "This project was a front-end challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
+      
     },
     {
       id: "bookmark",
@@ -39,6 +43,9 @@ const projects = [
       mobile: `${mobileBookmark}`,
       imageUrl: `${mobileBookmark}`,
       alt: "bookmark manager project preview",
+      tag: "Interaction Design / Front End Development",
+      tech: "HTML / CSS / JS",
+      background: "This project was a front-end challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
     },
     {
       id: "insure",
@@ -51,6 +58,9 @@ const projects = [
       mobile: `${mobileInsure}`,
       imageUrl: `${mobileInsure}`,
       alt: "insurance service landing page project preview",
+      tag: "Interaction Design / Front End Development",
+      tech: "HTML / CSS / JS",
+      background: "This project was a front-end challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
     },
     {
       id: "fylo",
@@ -63,6 +73,9 @@ const projects = [
       mobile: `${mobileFylo}`,
       imageUrl: `${mobileFylo}`,
       alt: "file manager project preview",
+      tag: "Interaction Design / Front End Development",
+      tech: "HTML / CSS ",
+      background: "This project was a front-end challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
     },
     
   ];

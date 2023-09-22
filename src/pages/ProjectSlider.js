@@ -36,16 +36,35 @@ function ProjectSlider() {
   }
 
   return (
-    <div>
-      <h1>{currentProject.title}</h1>
+    <section className={styles.padding_2}>
+      <div className={styles.header_wrapper}>
+        <h2 className={styles.section__header}>{currentProject.title}</h2>
+        <p className={styles.description_txt}>
+          {currentProject.description}
+        </p>
+        <div className={styles.tags}>
+          <p className={styles.accent}>{currentProject.tag}</p>
+          <p className={styles.accent}>{currentProject.tech}</p>
+        </div>
 
-      {/* Add content specific to the current project */}
-      <p>{currentProject.description}</p>
-      <img src={currentProject.imageUrl} alt={currentProject.alt} />
+        <a className={`${styles.button} ${styles.button_secondary}`}>
+          visit website
+        </a>
+      </div>
+      <div className={styles.detail_wrapper}>
+        <h3 className={styles.section__subheader}>Project Background</h3>
+        <p className={styles.description_txt}>{currentProject.background}</p>
+      </div>
+      <div className={styles.preview_wrapper}>
+        <h3 className={styles.section__subheader}>Static Previews</h3>
+      </div>
 
       {/* Buttons for Previous and Next Project */}
       <div className={styles.nav_btns_wrapper}>
-        <button className={styles.nav_btn} onClick={() => goToProject(previousProjectIndex)}>
+        <button
+          className={styles.nav_btn}
+          onClick={() => goToProject(previousProjectIndex)}
+        >
           <svg
             className={styles.nav_arrow}
             xmlns="http://www.w3.org/2000/svg"
@@ -56,13 +75,14 @@ function ProjectSlider() {
           >
             <path d="M9 1L1 9L9 17" stroke="#33323D" />
           </svg>
-          <p className={styles.btn_title}>
-            {previousProject.title}
-          </p>
-          
+          <p className={styles.btn_title}>{previousProject.title}</p>
+
           <p className={styles.btn_nav_txt}>Previous Project</p>
         </button>
-        <button className={styles.nav_btn} onClick={() => goToProject(nextProjectIndex)}>
+        <button
+          className={styles.nav_btn}
+          onClick={() => goToProject(nextProjectIndex)}
+        >
           <svg
             className={styles.nav_arrow}
             xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +97,7 @@ function ProjectSlider() {
           <p className={styles.btn_nav_txt}>Next Project</p>
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
