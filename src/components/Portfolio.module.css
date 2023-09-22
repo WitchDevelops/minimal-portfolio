@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap");
-@import './Reset.css';
 .padding_2 {
   padding-inline: 2rem;
 }
@@ -113,18 +112,89 @@
   color: #fff;
 }
 
-::-moz-selection {
-  background: #5fb4a2;
-  color: #fff;
+.project {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .project {
+    padding-inline: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .project {
+    flex-direction: row;
+    gap: 4.31rem;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .project {
+    gap: 7.81rem;
+    justify-content: flex-start;
+  }
 }
 
-::selection {
-  background: #5fb4a2;
-  color: #fff;
+@media (min-width: 768px) {
+  .project:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 992px) {
+  .project:nth-of-type(1) {
+    margin-top: 3.87rem;
+  }
 }
 
-/* main styles */
-.body__wrapper {
-  max-width: 1111px;
-  margin: auto;
-}/*# sourceMappingURL=App.css.map */
+.project:not(:nth-of-type(1)) {
+  margin-top: 4.5rem;
+}
+@media (min-width: 992px) {
+  .project:not(:nth-of-type(1)) {
+    margin-top: 5rem;
+  }
+}
+
+.project_card_wrapper {
+  border-block: 1px solid rgba(51, 50, 61, 0.0823529412);
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .project_card_wrapper {
+    max-width: 35%;
+  }
+}
+@media (min-width: 992px) {
+  .project_card_wrapper {
+    max-width: 33%;
+  }
+}
+
+.project_card {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .project_card {
+    margin-top: unset;
+    align-self: center;
+  }
+}
+
+.project_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.button {
+  width: 175px;
+}/*# sourceMappingURL=Portfolio.module.css.map */

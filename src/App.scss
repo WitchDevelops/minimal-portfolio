@@ -17,32 +17,4 @@
   margin: auto;
 }
 
-.portfolio__project {
-  display: flex;
-  flex-direction: column;
-  @media (min-width: 768px) {
-    flex-direction: row;
-    gap: 69px;
-  }
-}
-@media (min-width: 768px) {
-  .portfolio__project:nth-of-type(2n) {
-    flex-direction: row-reverse;
-  }
-}
-.portfolio__project:not(:nth-of-type(1)) {
-  margin-top: 72px;
-}
-.project__card {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  gap: 24px;
-  padding-block: 24px;
-  border-block: 1px solid #33323D15;
-  margin-top: 2rem;
-  .button {
-    width: 175px;
-  }
 
-}
