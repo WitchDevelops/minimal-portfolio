@@ -58,6 +58,18 @@ What I quickly learned:
 <header className={`${styles.home__intro} ${styles.padding_2}`}>
 ```
 
+### react hooks
+
+#### `useNavigate`
+
+To move from one component to another. I used if for the page which displays details of each project and has those two buttons at the bottom. `useNavigate` helps to go to the specific URL, forward or backward pages.
+* [what is it and how to use it](https://www.geeksforgeeks.org/reactjs-usenavigate-hook/)
+* [Stack overflow question](https://stackoverflow.com/questions/64838587/how-to-properly-use-usehistory-from-react-router-dom)
+```jsx
+const navigate = useNavigate()
+navigate('/')
+```
+
 ## Attributions
 
 * FrontEnd Mentor - design
