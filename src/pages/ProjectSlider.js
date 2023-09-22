@@ -37,6 +37,13 @@ function ProjectSlider() {
 
   return (
     <section className={styles.padding_2}>
+      <picture className={`${styles.img_fluid} ${styles.hero_img}`}>
+        <source srcset={currentProject.heroDesktop} media="(min-width: 768px)" />
+        <source srcset={currentProject.heroTablet} media="(min-width: 576px)" />
+        <source srcset={currentProject.heroMobile} media="(max-width: 575px)" />
+        <img className={`${styles.img_fluid} ${styles.hero_img}`} src={currentProject.heroMobile} alt="" />
+      </picture>
+      
       <div className={styles.header_wrapper}>
         <h2 className={styles.section__header}>{currentProject.title}</h2>
         <p className={styles.description_txt}>
@@ -47,7 +54,7 @@ function ProjectSlider() {
           <p className={styles.accent}>{currentProject.tech}</p>
         </div>
 
-        <a className={`${styles.button} ${styles.button_secondary}`}>
+        <a href="https://github.com/" target="_blank" rel="noreferrer" className={`${styles.button} ${styles.button_secondary}`}>
           visit website
         </a>
       </div>
@@ -57,6 +64,21 @@ function ProjectSlider() {
       </div>
       <div className={styles.preview_wrapper}>
         <h3 className={styles.section__subheader}>Static Previews</h3>
+        <div classname={styles.preview_images}>
+          <picture className={`${styles.img_fluid} ${styles.hero_img}`}>
+            <source srcset={currentProject.preview1Desktop} media="(min-width: 768px)" />
+            <source srcset={currentProject.preview1Tablet} media="(min-width: 576px)" />
+            <source srcset={currentProject.preview1Mobile} media="(max-width: 575px)" />
+            <img className={`${styles.img_fluid} ${styles.hero_img}`} src={currentProject.preview1Mobile} alt="" />
+          </picture>
+          <picture className={`${styles.img_fluid} ${styles.hero_img}`}>
+            <source srcset={currentProject.preview2Desktop} media="(min-width: 768px)" />
+            <source srcset={currentProject.preview2Tablet} media="(min-width: 576px)" />
+            <source srcset={currentProject.preview2Mobile} media="(max-width: 575px)" />
+            <img className={`${styles.img_fluid} ${styles.hero_img}`} src={currentProject.preview2Mobile} alt="" />
+          </picture>
+        </div>
+        
       </div>
 
       {/* Buttons for Previous and Next Project */}

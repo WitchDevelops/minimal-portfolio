@@ -1,11 +1,23 @@
 @import '../components/variables';
 
+.hero_img {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero_img img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
 .header_wrapper {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding-block: 1.5rem;
     margin-bottom: 3rem;
+    border-block: 1px solid $color--dark-15;
 }
 
 .description_txt {
@@ -40,12 +52,18 @@
     }
 }
 
+.preview_images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .nav_btns_wrapper {
     display: flex;
     flex-direction: row;
     flex-basis: 50%;
     justify-content: space-between;
-
+    margin-top: 4rem;
 }
 
 .nav_btn {
