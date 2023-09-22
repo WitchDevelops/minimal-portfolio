@@ -3,11 +3,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import "./App.css";
 import Navbar from "./components/Navbar";
+import CTA from "./components/CTA";
+import Footer from "./components/Footer";
+
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import ProjectSlider from "./pages/ProjectSlider";
 import Contact from "./pages/Contact";
-import CTA from "./components/CTA";
-import  Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:projectId" element={<ProjectSlider />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <CTA />
