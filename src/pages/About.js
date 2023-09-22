@@ -1,5 +1,4 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styles from "./About.module.css";
 
@@ -118,17 +117,13 @@ function About() {
               going for a walk, run or cycling. I’d love you to check out my
               work.
             </p>
-            <Nav>
-              <Nav.Item>
-                <Nav.Link
-                  as={Link}
-                  to="/portfolio"
-                  className={`${styles.button} ${styles.button_secondary}`}
-                >
-                  Go to Portfolio
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
+            <Link
+              as={Link}
+              to="/portfolio"
+              className={`${styles.button} ${styles.button_secondary}`}
+            >
+              Go to Portfolio
+            </Link>
           </div>
         </section>
       </main>
