@@ -6,7 +6,7 @@ import styles from "./Portfolio.module.css";
 
 function Portfolio() {
   return (
-    <section className="portfolio">
+    <section className={styles.portfolio}>
       {projects.map((project) => (
         <ProjectCard key={project.id} {...project} />
       ))}
