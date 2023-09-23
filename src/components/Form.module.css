@@ -204,4 +204,32 @@ textarea {
 
 .error_input {
   outline: 2px solid #B45F71;
+}
+
+.success {
+  color: hsl(245, 10%, 22%);
+  font-family: "Public Sans", Helvetica;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  /* 200% */
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  text-wrap: balance;
+}
+
+.form_button_again {
+  background-color: #5fb4a2;
+  margin: unset;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  border: transparent;
+  width: unset;
+  padding-inline: 1.5rem;
+}
+.form_button_again:hover {
+  color: #5fb4a2;
+  background-color: #fff;
+  outline: 1px solid #5fb4a2;
 }/*# sourceMappingURL=Form.module.css.map */
