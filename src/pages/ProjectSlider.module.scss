@@ -3,7 +3,11 @@
 .hero_img {
     max-width: 100%;
     overflow: hidden;
+    margin-top: 0.5rem;
     margin-bottom: 2.5rem;
+    @media (min-width: 576px) {
+        margin-top: 1.87rem;
+    }
 }
 
 .hero_img img {
@@ -19,8 +23,37 @@
     padding-block: 1.5rem;
     margin-bottom: 3rem;
     border-block: 1px solid $color--dark-15;
+    @media (min-width: 576px) {
+        padding-block: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+}
+.project_details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @media (min-width: 576px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "title description"
+        "tags description";
+        row-gap: 1rem;
+        column-gap: 0.75rem;
+    }
 }
 
+.tag_btn_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    order: 3;
+    @media (min-width: 576px) {
+        grid-area: tags;
+        gap: 1rem;
+    }
+}
 .description_txt {
     color: $color--dark;
     font-family: $txt--sans;
@@ -30,6 +63,10 @@
     line-height: 1.875rem;
     /* 200% */
     opacity: 0.8;
+    order: 2;
+    @media (min-width: 576px) {
+        grid-area: description;
+    }
 }
 
 .accent {
@@ -65,6 +102,9 @@
     flex-basis: 50%;
     justify-content: space-between;
     margin-top: 4rem;
+    @media (min-width: 576px) {
+        margin-top: 5rem;
+    }
 }
 
 .nav_btn {
