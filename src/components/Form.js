@@ -6,7 +6,7 @@ function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [emailError, setEmailError] = useState('');
+  const [emailError, setEmailError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   //email validation
@@ -28,9 +28,9 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateEmail(email)) {
-        setEmailError('Please enter a valid email address.');
-        return;
-      }
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
     //TODO form submisstion logic
 
     //clear form fields after submission ans set the submit state to true
@@ -47,73 +47,81 @@ function Form() {
 
   return (
     <div>
-        {isSubmitted ? (
-            <div>
-                <p className={styles.success}>Your message has been successfully submitted!</p>
-                <button
-              onClick={handleResetForm}
-              className={`${styles.button} ${styles.button__text} ${styles.form_button_again}`}
-            >
-              Submit Another Message
-            </button>
-            </div>
-        ) : (
-            <form className={styles.form_wrapper} onSubmit={handleSubmit}>
-      <div className={styles.form_group}>
-        <label htmlFor="name" className={styles.form_label}>
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Jane Appleseed"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className={styles.form_input}
-          required
-        ></input>
-      </div>
-      <div className={styles.form_group}>
-        <label htmlFor="email" className={styles.form_label}>
-          Email Address
-        </label>
-        <input
-          id="email"
-          name="email"
-          placeholder="email@example.com"
-          value={email}
-          onChange={handleEmailChange}
-          className={`${styles.form_input} ${emailError ? styles.error_input : ''}`}
-          required
-        ></input>
-        {emailError && <p className={styles.error}>{emailError}</p>}
-      </div>
-      <div className={styles.form_group}>
-        <label htmlFor="message" className={styles.form_label}>
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="How can I help?"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className={styles.form_input}
-          required
-        ></textarea>
-      </div>
+      {isSubmitted ? (
+        <div>
+          <p className={styles.success}>
+            Your message has been successfully submitted!
+          </p>
+          <button
+            onClick={handleResetForm}
+            className={`${styles.button} ${styles.button__text} ${styles.form_button_again}`}
+          >
+            Submit Another Message
+          </button>
+        </div>
+      ) : (
+        <form
+          action="https://formbold.com/s/6M7mA"
+          method="POST"
+          className={styles.form_wrapper}
+          onSubmit={handleSubmit}
+        >
+          <div className={styles.form_group}>
+            <label htmlFor="name" className={styles.form_label}>
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Jane Appleseed"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className={styles.form_input}
+              required
+            ></input>
+          </div>
+          <div className={styles.form_group}>
+            <label htmlFor="email" className={styles.form_label}>
+              Email Address
+            </label>
+            <input
+              id="email"
+              name="email"
+              placeholder="email@example.com"
+              value={email}
+              onChange={handleEmailChange}
+              className={`${styles.form_input} ${
+                emailError ? styles.error_input : ""
+              }`}
+              required
+            ></input>
+            {emailError && <p className={styles.error}>{emailError}</p>}
+          </div>
+          <div className={styles.form_group}>
+            <label htmlFor="message" className={styles.form_label}>
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="How can I help?"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className={styles.form_input}
+              required
+            ></textarea>
+          </div>
 
-      <button
-        type="submit"
-        className={`${styles.button} ${styles.button__text} ${styles.form_button}`}
-      >
-        send message
-      </button>
-    </form>
-        )}
+          <button
+            type="submit"
+            className={`${styles.button} ${styles.button__text} ${styles.form_button}`}
+          >
+            send message
+          </button>
+        </form>
+      )}
     </div>
-    
   );
 }
 

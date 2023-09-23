@@ -63,15 +63,40 @@ What I quickly learned:
 #### `useNavigate`
 
 To move from one component to another. I used if for the page which displays details of each project and has those two buttons at the bottom. `useNavigate` helps to go to the specific URL, forward or backward pages.
+
 * [what is it and how to use it](https://www.geeksforgeeks.org/reactjs-usenavigate-hook/)
 * [Stack overflow question](https://stackoverflow.com/questions/64838587/how-to-properly-use-usehistory-from-react-router-dom)
+
 ```jsx
 const navigate = useNavigate()
 navigate('/')
 ```
+
+#### `useLocation`
+
+Useful hook to render a component based on the path. I am conditionally rendering the CTA component: it is displayed on every page BUT the `/contact`.
+How to set it up:
+
+```jsx
+{/* define the location in question */}
+const location = useLocation();
+const isContactPage = location.pathname === "/contact";
+
+{/* ... */}
+return (
+    <Routes>
+        {/* ... */}
+        {!isContactPage && <CTA />}
+        {/* ... */}
+    </Routes>
+)
+```
+
+When using this the `<Router>` has to wrap the whole `<App>`.
 
 ## Attributions
 
 * FrontEnd Mentor - design
 * [Freepik/Flaticon](https://www.flaticon.com/free-icons/portfolio) - icon for the favicon
 * [Favicon converter](https://favicon.io/favicon-converter/) - generated favicon pack
+* [Form Bold](https://formbold.com/) - free form backend
