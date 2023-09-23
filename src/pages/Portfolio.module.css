@@ -24,13 +24,26 @@
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 2.625rem; /* 105% */
+  line-height: 2.625rem;
+  /* 105% */
   letter-spacing: -0.357px;
 }
 
+.section__subheader {
+  color: hsl(245, 10%, 22%);
+  font-family: "Ibarra Real Nova", Helvetica;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.625rem;
+  /* 131.25% */
+  letter-spacing: -0.01788rem;
+  margin-bottom: 1.75rem;
+}
+
 /* some bootstrap classes
-/* I don't know hot to use Bootstrap with custom css for isolated components (classname syntax)
-/* so I'll just declare them here for now */
+  /* I don't know hot to use Bootstrap with custom css for isolated components (classname syntax)
+  /* so I'll just declare them here for now */
 @media (min-width: 768px) {
   .col_md_5 {
     flex: 0 0 41.666667%;
@@ -110,91 +123,4 @@
   background-color: hsl(245, 10%, 22%);
   outline: 1px solid #fff;
   color: #fff;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-}
-@media (max-width: 767px) {
-  .project {
-    padding-inline: 2rem;
-  }
-}
-@media (min-width: 768px) {
-  .project {
-    flex-direction: row;
-    gap: 4.31rem;
-    justify-content: center;
-    align-items: center;
-    padding-inline: 2.5rem;
-  }
-}
-@media (min-width: 992px) {
-  .project {
-    gap: 7.81rem;
-    justify-content: flex-start;
-  }
-}
-
-@media (min-width: 768px) {
-  .project:nth-of-type(2n) {
-    flex-direction: row-reverse;
-  }
-}
-@media (min-width: 992px) {
-  .project:nth-of-type(1) {
-    margin-top: 3.87rem;
-  }
-}
-
-.project:not(:nth-of-type(1)) {
-  margin-top: 4.5rem;
-}
-@media (min-width: 992px) {
-  .project:not(:nth-of-type(1)) {
-    margin-top: 5rem;
-  }
-}
-
-.project_card_wrapper {
-  border-block: 1px solid rgba(51, 50, 61, 0.0823529412);
-  align-self: stretch;
-  display: flex;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .project_card_wrapper {
-    max-width: 35%;
-  }
-}
-@media (min-width: 992px) {
-  .project_card_wrapper {
-    max-width: 33%;
-  }
-}
-
-.project_card {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  gap: 1.5rem;
-  padding-block: 1.5rem;
-  margin-top: 2rem;
-}
-@media (min-width: 768px) {
-  .project_card {
-    margin-top: unset;
-    align-self: center;
-  }
-}
-
-.project_img img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.button {
-  width: 175px;
 }/*# sourceMappingURL=Portfolio.module.css.map */

@@ -125,12 +125,26 @@
   color: #fff;
 }
 
+.hero_img {
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.hero_img img {
+  display: block;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .header_wrapper {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding-block: 1.5rem;
   margin-bottom: 3rem;
+  border-block: 1px solid hsla(245, 10%, 22%, 0.15);
 }
 
 .description_txt {
@@ -163,11 +177,17 @@
   margin-bottom: 2.5rem;
 }
 
+.preview_img {
+  display: block;
+  margin-bottom: 2rem;
+}
+
 .nav_btns_wrapper {
   display: flex;
   flex-direction: row;
   flex-basis: 50%;
   justify-content: space-between;
+  margin-top: 4rem;
 }
 
 .nav_btn {

@@ -65,17 +65,17 @@ function ProjectSlider() {
       <div className={styles.preview_wrapper}>
         <h3 className={styles.section__subheader}>Static Previews</h3>
         <div classname={styles.preview_images}>
-          <picture className={`${styles.img_fluid} ${styles.hero_img}`}>
+          <picture className={`${styles.img_fluid} ${styles.preview_img}`}>
             <source srcset={currentProject.preview1Desktop} media="(min-width: 768px)" />
             <source srcset={currentProject.preview1Tablet} media="(min-width: 576px)" />
             <source srcset={currentProject.preview1Mobile} media="(max-width: 575px)" />
-            <img className={`${styles.img_fluid} ${styles.hero_img}`} src={currentProject.preview1Mobile} alt="" />
+            <img className={`${styles.img_fluid} ${styles.preview_img}`} src={currentProject.preview1Mobile} alt="" />
           </picture>
-          <picture className={`${styles.img_fluid} ${styles.hero_img}`}>
+          <picture className={styles.img_fluid}>
             <source srcset={currentProject.preview2Desktop} media="(min-width: 768px)" />
             <source srcset={currentProject.preview2Tablet} media="(min-width: 576px)" />
             <source srcset={currentProject.preview2Mobile} media="(max-width: 575px)" />
-            <img className={`${styles.img_fluid} ${styles.hero_img}`} src={currentProject.preview2Mobile} alt="" />
+            <img className={styles.img_fluid} src={currentProject.preview2Mobile} alt="" />
           </picture>
         </div>
         

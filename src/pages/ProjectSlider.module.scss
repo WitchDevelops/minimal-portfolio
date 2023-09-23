@@ -3,6 +3,7 @@
 .hero_img {
     max-width: 100%;
     overflow: hidden;
+    margin-bottom: 2.5rem;
 }
 
 .hero_img img {
@@ -52,10 +53,10 @@
     }
 }
 
-.preview_images {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+
+.preview_img {
+    display: block;
+    margin-bottom: 2rem;
 }
 
 .nav_btns_wrapper {
