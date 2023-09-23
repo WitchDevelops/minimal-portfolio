@@ -157,10 +157,6 @@
   font: 1rem "Public Sans", Helvetica;
 }
 
-input:user-invalid {
-  outline: 2px solid #B45F71;
-}
-
 input:valid {
   outline: 2px solid #5fb4a2;
 }
@@ -199,4 +195,13 @@ textarea {
 }
 .form_button:hover {
   background-color: hsl(205, 41%, 25%);
+}
+
+.error {
+  color: #B45F71;
+  font-family: "Public Sans", Helvetica;
+}
+
+.error_input {
+  outline: 2px solid #B45F71;
 }/*# sourceMappingURL=Form.module.css.map */

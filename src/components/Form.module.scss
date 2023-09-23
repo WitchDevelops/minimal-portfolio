@@ -32,10 +32,6 @@
     font: 1rem $txt--sans;
 }
 
-input:user-invalid {
-    outline: 2px solid $color--error;
-}
-
 input:valid {
     outline: 2px solid $color--accent;
 }
@@ -76,4 +72,12 @@ textarea {
     &:hover {
         background-color: $color--main--darker;
     }
+}
+.error {
+    color: $color--error;
+    font-family: $txt--sans;
+}
+
+.error_input {
+    outline: 2px solid $color--error;
 }
