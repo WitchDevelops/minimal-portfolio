@@ -136,12 +136,26 @@
     margin-top: 1.87rem;
   }
 }
+@media (min-width: 992px) {
+  .hero_img {
+    margin-bottom: 7.19rem;
+  }
+}
 
 .hero_img img {
   display: block;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .desktop_wrapper {
+    display: grid;
+    grid-template-columns: 0.72fr 1fr;
+    -moz-column-gap: 7.81rem;
+         column-gap: 7.81rem;
+  }
 }
 
 .header_wrapper {
@@ -158,13 +172,20 @@
     margin-bottom: 2.5rem;
   }
 }
+@media (min-width: 992px) {
+  .header_wrapper {
+    padding-block: unset;
+    margin-bottom: unset;
+    border-block: unset;
+  }
+}
 
 .project_details {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .project_details {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -174,6 +195,12 @@
          column-gap: 0.75rem;
   }
 }
+@media (min-width: 992px) {
+  .project_details {
+    border-block: 1px solid hsla(245, 10%, 22%, 0.15);
+    padding-block: 3rem;
+  }
+}
 
 .tag_btn_wrapper {
   display: flex;
@@ -181,7 +208,7 @@
   gap: 1.5rem;
   order: 3;
 }
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .tag_btn_wrapper {
     grid-area: tags;
     gap: 1rem;
@@ -199,7 +226,7 @@
   opacity: 0.8;
   order: 2;
 }
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .description_txt {
     grid-area: description;
   }
@@ -223,6 +250,11 @@
 .preview_wrapper .section__subheader {
   margin-bottom: 2.5rem;
 }
+@media (min-width: 992px) {
+  .preview_wrapper .section__subheader {
+    margin-bottom: 1.75rem;
+  }
+}
 
 .preview_img {
   display: block;
@@ -239,6 +271,11 @@
 @media (min-width: 576px) {
   .nav_btns_wrapper {
     margin-top: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .nav_btns_wrapper {
+    margin-top: 4rem;
   }
 }
 
@@ -301,7 +338,7 @@
   letter-spacing: -0.01788rem;
 }
 
-.btn_nav_text {
+.btn_nav_txt {
   color: hsl(245, 10%, 22%);
   opacity: 0.5;
   font-family: "Public Sans", Helvetica;
