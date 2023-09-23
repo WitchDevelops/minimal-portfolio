@@ -186,6 +186,10 @@
 }
 .footer__icon {
   fill: white;
+  transition: all 200ms ease-in;
+}
+.footer__icon:hover {
+  fill: #5fb4a2;
 }
 
 .nav_link {

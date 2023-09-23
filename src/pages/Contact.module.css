@@ -185,6 +185,10 @@
 
 .contact_icon {
   fill: hsl(245, 10%, 22%);
+  transition: all 200ms ease-in;
+}
+.contact_icon:hover {
+  fill: #5fb4a2;
 }
 
 @media (min-width: 992px) {

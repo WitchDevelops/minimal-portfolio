@@ -62,6 +62,10 @@
     }
     &__icon {
         fill: white;
+        transition: all 200ms ease-in;
+        &:hover {
+            fill: $color--accent;
+        }
     }
 }
 
