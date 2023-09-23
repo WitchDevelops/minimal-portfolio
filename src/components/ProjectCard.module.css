@@ -125,60 +125,89 @@
   color: #fff;
 }
 
-.navbar {
-  padding-block: 32px;
+.project {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .project {
+    padding-inline: 2rem;
+  }
 }
 @media (min-width: 768px) {
-  .navbar {
-    padding-top: 64px;
-    padding-bottom: 40px;
+  .project {
+    flex-direction: row;
+    gap: 4.31rem;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .project {
+    gap: 7.81rem;
+    justify-content: flex-start;
   }
 }
 
-.container-fluid {
-  --bs-gutter-x: 0rem;
+@media (min-width: 768px) {
+  .project:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 992px) {
+  .project:nth-of-type(1) {
+    margin-top: 3.87rem;
+  }
 }
 
-.navbar_toggler {
-  border: none;
-  width: 24px;
-  height: 24px;
-  --bs-navbar-toggler-padding-y: 0;
-  --bs-navbar-toggler-padding-x: 0;
+.project:not(:nth-of-type(1)) {
+  margin-top: 4.5rem;
+}
+@media (min-width: 992px) {
+  .project:not(:nth-of-type(1)) {
+    margin-top: 5rem;
+  }
 }
 
-.nav_item {
-  color: hsl(245, 10%, 22%);
-  font-family: "Public Sans", Helvetica;
-  font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  transition: all 200ms ease-in;
-  box-sizing: border-box;
+.project_card_wrapper {
+  border-block: 1px solid rgba(51, 50, 61, 0.0823529412);
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
 }
 @media (min-width: 768px) {
-  .nav_item {
-    position: relative;
+  .project_card_wrapper {
+    max-width: 35%;
   }
-  .nav_item:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #5fb4a2;
-    transform-origin: bottom center;
-    transition: transform 0.2s ease-out;
-    font-weight: bold;
+}
+@media (min-width: 992px) {
+  .project_card_wrapper {
+    max-width: 33%;
   }
-  .nav_item:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom center;
+}
+
+.project_card {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .project_card {
+    margin-top: unset;
+    align-self: center;
   }
-}/*# sourceMappingURL=Navbar.module.css.map */
+}
+
+.project_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.button {
+  width: 175px;
+}/*# sourceMappingURL=ProjectCard.module.css.map */
