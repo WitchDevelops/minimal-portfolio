@@ -24,7 +24,10 @@ function App() {
           <Route path="/portfolio/:projectId" element={<ProjectSlider />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <CTA />
+
+          <CTA />
+
+        
        <Footer />
     </Router>
     </div>

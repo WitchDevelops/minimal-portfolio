@@ -1,0 +1,79 @@
+@import '../components/variables';
+
+.form_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form_label {
+    color: $color--dark;
+    font-family: $txt--sans;
+    opacity: 0.8;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem;
+    /* 230.769% */
+}
+
+.form_input {
+    background-color: $color--dark-10;
+    border: transparent;
+    padding-block: 0.56rem;
+    padding-inline: 1rem;
+    caret-color: $color--dark-40;
+    font: 1rem $txt--sans;
+}
+
+input:user-invalid {
+    outline: 2px solid $color--error;
+}
+
+input:valid {
+    outline: 2px solid $color--accent;
+}
+
+textarea {
+    min-height: 6rem;
+    resize: none;
+}
+
+::-ms-input-placeholder {
+    /* Edge 12-18 */
+    color: $color--dark-40;
+    font-family: $txt--sans;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+    /* 230.769% */
+}
+
+::placeholder {
+    color: $color--dark-40;
+    font-family: $txt--sans;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+    /* 230.769% */
+}
+
+.form_button {
+    background-color: $color--main;
+    margin: unset;
+    color: $color--white;
+    transition: all 200ms ease-in-out;
+    border: transparent;
+
+    &:hover {
+        background-color: $color--main--darker;
+    }
+}
