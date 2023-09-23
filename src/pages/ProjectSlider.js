@@ -137,9 +137,11 @@ function ProjectSlider() {
           >
             <path d="M9 1L1 9L9 17" stroke="#33323D" />
           </svg>
-          <p className={styles.btn_title}>{previousProject.title}</p>
-
-          <p className={styles.btn_nav_txt}>Previous Project</p>
+          <div className={styles.btn_txt_wrapper}>
+            <p className={styles.btn_title}>{previousProject.title}</p>
+            <p className={styles.btn_nav_txt}>Previous Project</p>
+          </div>
+          
         </button>
         <button
           className={styles.nav_btn}
@@ -155,8 +157,9 @@ function ProjectSlider() {
           >
             <path d="M1 1L9 9L1 17" stroke="#33323D" />
           </svg>
+          <div className={styles.btn_txt_wrapper}>
           <p className={styles.btn_title}>{nextProject.title}</p>
-          <p className={styles.btn_nav_txt}>Next Project</p>
+          <p className={styles.btn_nav_txt}>Next Project</p></div>
         </button>
       </div>
     </section>
