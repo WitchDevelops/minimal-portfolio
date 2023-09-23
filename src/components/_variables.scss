@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,700;1,400&family=Public+Sans:wght@400;700&display=swap');
 
 $color--dark: hsl(245, 10%, 22%);
+$color--dark-40: hsl(245, 10%, 22%, 0.40);
 $color--dark-15: hsl(245, 10%, 22%, 0.15);
+$color--dark-10: hsl(245, 10%, 22%, 0.10);
 $color--main: hsl(205, 41%, 21%);
 $color--main--darker: hsl(205, 41%, 25%);
 $color--hover: #94a8a4;
 $color--accent: #5fb4a2;
+$color--error: #B45F71;
 $color--white: #fff;
 $txt--sans: "Public Sans", Helvetica;
 $txt--serif: "Ibarra Real Nova", Helvetica;

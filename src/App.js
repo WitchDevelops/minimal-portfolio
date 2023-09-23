@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import CTA from "./components/CTA";
@@ -12,21 +12,24 @@ import Contact from "./pages/Contact";
 
 import "./App.css";
 
-
 function App() {
+  //conditional rendering of the CTA component
+  const location = useLocation();
+  const isContactPage = location.pathname === "/contact";
+
   return (
     <div className="body__wrapper">
-    <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" exact element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/:projectId" element={<ProjectSlider />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <CTA />
-       <Footer />
-    </Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:projectId" element={<ProjectSlider />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <div>
+        {!isContactPage && <CTA />}
+        <Footer />
+      </div>
     </div>
   );
 }
