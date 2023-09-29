@@ -135,6 +135,11 @@
   justify-content: center;
   padding-block: 3.5rem;
 }
+@media (min-width: 758px) {
+  .footer {
+    padding-block: 2rem;
+  }
+}
 @media (min-width: 768px) {
   .footer__wrapper {
     display: flex;

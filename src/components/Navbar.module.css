@@ -127,6 +127,14 @@
 
 .navbar {
   padding-block: 32px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: hsla(0, 100%, 100%, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 1111px;
 }
 @media (min-width: 768px) {
   .navbar {
