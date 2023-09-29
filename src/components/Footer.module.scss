@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
     padding-block: 3.5rem;
+    @media (min-width: 758px) {
+        padding-block: 2rem;
+    }
     &__wrapper {
         @media (min-width: 768px) {
             display: flex;
