@@ -36,7 +36,7 @@ function ProjectSlider() {
   }
 
   return (
-    <section className={styles.padding_2}>
+    <section className={`${styles.padding_2} ${styles.margin_top}`}>
       <picture className={`${styles.img_fluid} ${styles.hero_img}`}>
         <source
           srcset={currentProject.heroDesktop}
