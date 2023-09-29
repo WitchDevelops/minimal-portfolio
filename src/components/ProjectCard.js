@@ -15,7 +15,7 @@ function ProjectCard({
 }) {
   return (
     <div className={`${styles.project}`}>
-      <picture className={`${styles.col_md_5} ${styles.project_img}`}>
+      <picture className={`${styles.col_md_5} ${styles.project_img}`} loading="lazy">
         <source srcset={desktop} media="(min-width: 768px)" />
         <source srcset={tablet} media="(min-width: 576px)" />
         <source srcset={mobile} media="(max-width: 575px)" />
