@@ -150,13 +150,9 @@
   }
 }
 
-.CTA_wrapper {
-  display: block;
-}
-
 .CTA {
   margin: auto;
-  margin-top: 2.5;
+  margin-top: 2.5rem;
   margin-bottom: 5rem;
 }
 @media (min-width: 768px) {
