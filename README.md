@@ -100,3 +100,10 @@ When using this the `<Router>` has to wrap the whole `<App>`.
 * [Freepik/Flaticon](https://www.flaticon.com/free-icons/portfolio) - icon for the favicon
 * [Favicon converter](https://favicon.io/favicon-converter/) - generated favicon pack
 * [Form Bold](https://formbold.com/) - free form backend
+
+## Performance
+
+Needs work, but I don't know how to improve it. Can it be blamed on `create-react-app`?
+
+![image](https://github.com/WitchDevelops/minimal-portfolio/assets/112077394/d4b62934-c0e6-4f65-96ba-a5355f13fd8e)
+
