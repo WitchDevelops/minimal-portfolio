@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./About.module.css";
 
 import desktopImage1x from "../assets/images/homepage/desktop/image-homepage-hero.jpg";
@@ -15,10 +15,15 @@ import mobileProfileImage2x from "../assets/images/homepage/mobile/image-homepag
 import mobileProfileImage from "../assets/images/homepage/mobile/image-homepage-profile.jpg";
 
 function About() {
+  const navigate = useNavigate();
+  const handlePortfolioLinkClick = () => {
+    window.scrollTo(0,0);
+    navigate("/portfolio");
+  }
   return (
     <div className={styles.about}>
       <header className={`${styles.home__intro} ${styles.padding_2}`}>
-        <picture className={`${styles.img_fluid} ${styles.w_100}`} loading="lazy">
+        <picture className={`${styles.img_fluid} ${styles.w_100} `} loading="lazy">
           <source srcSet={desktopImage1x} media="(min-width: 1440px)" />
           <source srcSet={desktopImage2x} media="(min-width: 1440px)" />
           <source srcSet={tabletImage1x} media="(min-width: 768px)" />
@@ -85,7 +90,7 @@ function About() {
       </header>
       <main className={styles.padding_2}>
         <section className={styles.home__about} id="about-me">
-          <picture className={`${styles.about__picture} ${styles.col_md_5}`} loading="lazy">
+          <picture className={`${styles.about__picture} ${styles.col_md_5} ${styles.revealing_image}`} loading="lazy">
             <source
               srcSet={desktopProfileImage1x}
               media="(min-width: 1440px)"
@@ -120,6 +125,7 @@ function About() {
             <Link
               as={Link}
               to="/portfolio"
+              onClick={handlePortfolioLinkClick}
               className={`${styles.button} ${styles.button_secondary}`}
             >
               Go to Portfolio

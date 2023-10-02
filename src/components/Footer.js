@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 function Footer() {
+  const handleFooterClick = () => {
+    window.scrollTo(0,0);
+  }
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__wrapper}>
@@ -25,17 +28,17 @@ function Footer() {
 
           <Nav className={styles.footer__text}>
             <Nav.Item>
-              <Nav.Link as={Link} to="/" className={styles.nav_link}>
+              <Nav.Link as={Link} to="/" onClick={handleFooterClick} className={styles.nav_link}>
                 Home
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link as={Link} to="/portfolio" className={styles.nav_link}>
+              <Nav.Link as={Link} to="/portfolio" onClick={handleFooterClick} className={styles.nav_link}>
                 Portfolio
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link as={Link} to="/contact" className={styles.nav_link}>
+              <Nav.Link as={Link} to="/contact" onClick={handleFooterClick} className={styles.nav_link}>
                 Contact Me
               </Nav.Link>
             </Nav.Item>

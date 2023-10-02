@@ -85,7 +85,7 @@ function ProjectSlider() {
           <div className={styles.preview_wrapper}>
             <h3 className={styles.section__subheader}>Static Previews</h3>
             <div classname={styles.preview_images}>
-              <picture className={`${styles.img_fluid} ${styles.preview_img}`} loading="lazy">
+              <picture className={`${styles.img_fluid} ${styles.preview_img} `} loading="lazy">
                 <source
                   srcset={currentProject.preview1Desktop}
                   media="(min-width: 768px)"

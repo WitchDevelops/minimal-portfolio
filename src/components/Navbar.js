@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import styles from "./Navbar.module.css";
 
 function CustomNavbar() {
+  const handleNavbarClick = () => {
+    window.scrollTo(0,0);
+  }
   return (
     <Navbar expand="md" variant="light" className={`${styles.padding_2} ${styles.navbar}`}>
       <Container fluid>
@@ -18,13 +21,13 @@ function CustomNavbar() {
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="w-100 align-items-end justify-content-end">
             <Nav.Item className={styles.nav_item}>
-              <Nav.Link as={Link} to="/" className="nav-link active">Home</Nav.Link>
+              <Nav.Link as={Link} to="/" onClick={handleNavbarClick} className="nav-link active">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item className={styles.nav_item}>
-              <Nav.Link as={Link} to="/portfolio" className="nav-link">Portfolio</Nav.Link>
+              <Nav.Link as={Link} to="/portfolio" onClick={handleNavbarClick} className="nav-link">Portfolio</Nav.Link>
             </Nav.Item>
             <Nav.Item className={styles.nav_item}>
-              <Nav.Link as={Link} to="/contact" className="nav-link">Contact Me</Nav.Link>
+              <Nav.Link as={Link} to="/contact" onClick={handleNavbarClick} className="nav-link">Contact Me</Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
