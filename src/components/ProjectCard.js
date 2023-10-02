@@ -14,8 +14,8 @@ function ProjectCard({
   alt,
 }) {
   return (
-    <div className={`${styles.project}`}>
-      <picture className={`${styles.col_md_5} ${styles.project_img}`}>
+    <div className={`${styles.project} `}>
+      <picture className={`${styles.col_md_5} ${styles.project_img} ${styles.revealing_image}`} loading="lazy">
         <source srcset={desktop} media="(min-width: 768px)" />
         <source srcset={tablet} media="(min-width: 576px)" />
         <source srcset={mobile} media="(max-width: 575px)" />

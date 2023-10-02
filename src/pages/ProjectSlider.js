@@ -37,7 +37,7 @@ function ProjectSlider() {
 
   return (
     <section className={`${styles.padding_2} ${styles.margin_top}`}>
-      <picture className={`${styles.img_fluid} ${styles.hero_img}`}>
+      <picture className={`${styles.img_fluid} ${styles.hero_img}`} loading="lazy">
         <source
           srcset={currentProject.heroDesktop}
           media="(min-width: 768px)"
@@ -85,7 +85,7 @@ function ProjectSlider() {
           <div className={styles.preview_wrapper}>
             <h3 className={styles.section__subheader}>Static Previews</h3>
             <div classname={styles.preview_images}>
-              <picture className={`${styles.img_fluid} ${styles.preview_img}`}>
+              <picture className={`${styles.img_fluid} ${styles.preview_img} `} loading="lazy">
                 <source
                   srcset={currentProject.preview1Desktop}
                   media="(min-width: 768px)"
@@ -104,7 +104,7 @@ function ProjectSlider() {
                   alt=""
                 />
               </picture>
-              <picture className={styles.img_fluid}>
+              <picture className={styles.img_fluid} loading="lazy">
                 <source
                   srcset={currentProject.preview2Desktop}
                   media="(min-width: 768px)"
