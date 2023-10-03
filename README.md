@@ -52,7 +52,7 @@ What I quickly learned:
 }
 ```
 
-* when using multiple classes in JSX one has to precede the className declaration with the dolalr sign and basically template literals syntax. Like this:
+* when using multiple classes in JSX one has to precede the className declaration with the dollar sign and basically template literals syntax. Like this:
 
 ```jsx
 <header className={`${styles.home__intro} ${styles.padding_2}`}>
