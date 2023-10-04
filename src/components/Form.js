@@ -1,19 +1,18 @@
 import React, { useState } from "react";
+import { validateEmail } from "./formUtils";
 import styles from "./Form.module.css";
 
 function Form() {
   //define variables for the input fields
   const [name, setName] = useState("");
+  const [nameTouched, setNameTouched] = useState(false);
   const [email, setEmail] = useState("");
+  const [emailTouched, setEmailTouched] = useState(false);
   const [message, setMessage] = useState("");
+  const [messageTouched, setMessageTouched] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  //email validation
-  const validateEmail = (email) => {
-    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    return emailPattern.test(email);
-  };
   //to update the erorr state when user types into the input field
   const handleEmailChange = (e) => {
     const newEmail = e.target.value;
@@ -31,13 +30,17 @@ function Form() {
       setEmailError("Please enter a valid email address.");
       return;
     }
-    //TODO form submisstion logic
+    // Log a message when the form is submitted
+  console.log("Form submitted successfully!");
 
     //clear form fields after submission ans set the submit state to true
     setIsSubmitted(true);
     setName("");
+    setNameTouched(false);
     setEmail("");
+    setEmailTouched(false);
     setMessage("");
+    setMessageTouched(false);
   };
 
   //allow to show the contact form again after submission
@@ -65,6 +68,7 @@ function Form() {
           method="POST"
           className={styles.form_wrapper}
           onSubmit={handleSubmit}
+          novalidate
         >
           <div className={styles.form_group}>
             <label htmlFor="name" className={styles.form_label}>
@@ -77,26 +81,31 @@ function Form() {
               placeholder="Jane Appleseed"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              onBlur={() => setNameTouched(true)}
               className={styles.form_input}
               required
             ></input>
+            { nameTouched && name === "" && <p className={styles.error}>This field is required.</p> }
           </div>
           <div className={styles.form_group}>
             <label htmlFor="email" className={styles.form_label}>
               Email Address
             </label>
             <input
+              type="email"
               id="email"
               name="email"
               placeholder="email@example.com"
               value={email}
               onChange={handleEmailChange}
+              onBlur={() => setEmailTouched(true)}
               className={`${styles.form_input} ${
                 emailError ? styles.error_input : ""
               }`}
               required
             ></input>
-            {emailError && <p className={styles.error}>{emailError}</p>}
+            { emailTouched && email === "" && <p className={styles.error}>This field is required.</p> }
+            { emailError && <p className={styles.error}>{emailError}</p> }
           </div>
           <div className={styles.form_group}>
             <label htmlFor="message" className={styles.form_label}>
@@ -108,9 +117,11 @@ function Form() {
               placeholder="How can I help?"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              onBlur={() => setMessageTouched(true)}
               className={styles.form_input}
               required
             ></textarea>
+            { messageTouched && message === "" && <p className={styles.error}>Please enter a message.</p> }
           </div>
 
           <button
