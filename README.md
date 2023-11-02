@@ -17,10 +17,19 @@ From the FrontEnd Mentor challenge description:
 Despite I could easily build it in vanilla JS, I decided to push myself to practice React, routing and isolated components.
 
 ## Build with
+<div align="center">
+  <img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/react.svg"/>
+  <img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/react-router.svg"/>
+  <img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/sass.svg"/>
+  <img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/bootstrap.svg"/>
+  <img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/netlify-icon.svg"/>
+</div>
 
 * React (using React Router)
 * SCSS and Bootstrap
 * Isolated components (CSS modules library)
+  
+
 
 ## Live
 
