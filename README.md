@@ -58,6 +58,8 @@ What I quickly learned:
 <header className={`${styles.home__intro} ${styles.padding_2}`}>
 ```
 
+As it turned out (I learned it by chance upon watching [this video](https://youtu.be/ZVnjOPwW4ZA?si=lFVqO_KQJREM8Cz_&t=2645)) styles in css.modules are a JavaScript object. And this explains why `-` are not accepted in the class names and why we need template literals for declaring multiple classes on an element. Voila!
+
 ### react hooks
 
 #### `useNavigate`
